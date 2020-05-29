@@ -1,0 +1,2 @@
+rootProject.name='CalculatorMPrj2020'
+include ':app'
