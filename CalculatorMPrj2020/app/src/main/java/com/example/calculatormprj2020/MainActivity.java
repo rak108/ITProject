@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.buttonEquals).setOnClickListener(this);
         findViewById(R.id.buttonClear).setOnClickListener(this);
         findViewById(R.id.buttonBackspace).setOnClickListener(this);
-//        findViewById(R.id.buttonClearMemory).setOnClickListener(this);
+        findViewById(R.id.buttonPercent).setOnClickListener(this);
 //        findViewById(R.id.buttonAddToMemory).setOnClickListener(this);
 //        findViewById(R.id.buttonSubtractFromMemory).setOnClickListener(this);
 //        findViewById(R.id.buttonRecallMemory).setOnClickListener(this);

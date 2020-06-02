@@ -16,7 +16,7 @@ public class CalculatorBrain {
     private static final String SUBTRACT = "-";
     private static final String MULTIPLY = "*";
     private static final String DIVIDE = "/";
-
+    private static final String PERCENT = "%";
     private static final String CLEAR = "AC";
     private static final String LOG = "log";
     private static final String BACKSPACE = "C";
@@ -86,6 +86,9 @@ public class CalculatorBrain {
                 else
                     mOperand+=Math.PI;
                 break;
+            case PERCENT:
+                mOperand/=100;
+                break;
             case FACTORIAL:
                 int i;
                 double number=mOperand;//It is the number to calculate factorial
@@ -94,7 +97,7 @@ public class CalculatorBrain {
                     mOperand = mOperand * i;
                 }
 
-                    break;
+                break;
             case SQUAREROOT:
                 mOperand = Math.sqrt(mOperand);
                 break;
