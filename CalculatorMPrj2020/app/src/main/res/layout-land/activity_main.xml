@@ -38,6 +38,7 @@
 
         <Button
             android:id="@+id/buttonBackspace"
+            android:theme="@style/MemoryButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -45,6 +46,7 @@
 
         <Button
             android:id="@+id/buttonSquareRoot"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -73,6 +75,7 @@
 
         <Button
             android:id="@+id/buttonToggleSign"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -80,6 +83,7 @@
 
         <Button
             android:id="@+id/buttonClear"
+            android:theme="@style/MemoryButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -94,6 +98,7 @@
 
         <Button
             android:id="@+id/buttonFactorial"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -101,6 +106,7 @@
 
         <Button
             android:id="@+id/buttonPower"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -129,6 +135,7 @@
 
         <Button
             android:id="@+id/buttonMultiply"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -136,6 +143,7 @@
 
         <Button
             android:id="@+id/buttonDivide"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -150,6 +158,7 @@
 
         <Button
             android:id="@+id/buttonLog"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -157,6 +166,7 @@
 
         <Button
             android:id="@+id/buttonInvert"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -185,6 +195,7 @@
 
         <Button
             android:id="@+id/buttonAdd"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -192,6 +203,7 @@
 
         <Button
             android:id="@+id/buttonSubtract"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -206,6 +218,7 @@
 
         <Button
             android:id="@+id/buttonPI"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -213,6 +226,7 @@
 
         <Button
             android:id="@+id/buttonSine"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -220,6 +234,7 @@
 
         <Button
             android:id="@+id/buttonCosine"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -227,6 +242,7 @@
 
         <Button
             android:id="@+id/buttonTangent"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -241,6 +257,7 @@
 
         <Button
             android:id="@+id/buttonDecimalPoint"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
@@ -248,6 +265,7 @@
 
         <Button
             android:id="@+id/buttonEquals"
+            android:theme="@style/FunctionButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"

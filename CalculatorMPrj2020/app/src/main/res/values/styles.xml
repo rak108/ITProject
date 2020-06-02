@@ -24,7 +24,7 @@
     </style>
 
     <style name="MemoryButtonStyle" parent="Widget.AppCompat.Button.Colored">
-        <item name="colorButtonNormal">#A1887F</item>
+        <item name="colorButtonNormal">#333333</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 
