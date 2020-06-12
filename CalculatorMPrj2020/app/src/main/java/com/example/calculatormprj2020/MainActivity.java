@@ -64,12 +64,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.buttonClear).setOnClickListener(this);
         findViewById(R.id.buttonBackspace).setOnClickListener(this);
         findViewById(R.id.buttonPercent).setOnClickListener(this);
-//        findViewById(R.id.buttonAddToMemory).setOnClickListener(this);
-//        findViewById(R.id.buttonSubtractFromMemory).setOnClickListener(this);
-//        findViewById(R.id.buttonRecallMemory).setOnClickListener(this);
+
 
         // The following buttons only exist in layout-land (Landscape mode) and require extra attention.
-        // The messier option is to place the buttons in the regular layout too and set android:visibility="invisible".
+        
 
         if (findViewById(R.id.buttonLog) != null) {
             findViewById(R.id.buttonLog).setOnClickListener(this);
@@ -114,15 +112,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             // digit was pressed
             if (userIsInTheMiddleOfTypingANumber) {
 
-				//Toast.makeText(getApplicationContext(), "1", Toast.LENGTH_SHORT).show();
 
                 if (buttonPressed.equals(".") && mCalculatorDisplay.getText().toString().contains(".")) {
                     // ERROR PREVENTION
                     // Eliminate entering multiple decimals
- 					Toast.makeText(getApplicationContext(), "2", Toast.LENGTH_SHORT).show();
+ 					Toast.makeText(getApplicationContext(), "No Multiple Decimal Points", Toast.LENGTH_SHORT).show();
                 } else {
                     mCalculatorDisplay.append(buttonPressed);
-//					Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_SHORT).show();
                 }
 
             } else {
