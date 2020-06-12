@@ -14,7 +14,8 @@
         android:id="@+id/row1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".16">
+        android:layout_weight=".16"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textViewDisplay"
@@ -28,6 +29,13 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="30sp"
             tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TextView" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,11 +46,11 @@
 
         <Button
             android:id="@+id/buttonBackspace"
-            android:theme="@style/MemoryButtonStyle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
-            android:text="@string/buttonBackspace"/>
+            android:text="@string/buttonBackspace"
+            android:theme="@style/MemoryButtonStyle" />
 
         <Button
             android:id="@+id/buttonSquareRoot"
@@ -57,7 +65,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".142"
-            android:text="@string/button7"/>
+            android:text="@string/button7" />
 
         <Button
             android:id="@+id/button8"

@@ -1,6 +1,8 @@
 package com.example.calculatormprj2020;
 
 import android.annotation.SuppressLint;
+
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
 
+
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private TextView mCalculatorDisplay;
@@ -23,6 +26,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     DecimalFormat df = new DecimalFormat("@###########");
 
     CalculatorBrain mCalculatorBrain;
+    private Context context;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         setContentView(R.layout.activity_main);
 
         final ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
+        if (actionBar != null) {
             actionBar.hide();
 
         }
@@ -67,7 +73,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
 
         // The following buttons only exist in layout-land (Landscape mode) and require extra attention.
-        
+
+
+
+        if (findViewById(R.id.buttonPercent) != null) {
+            findViewById(R.id.buttonPercent).setOnClickListener(this);
+        }
+
 
         if (findViewById(R.id.buttonLog) != null) {
             findViewById(R.id.buttonLog).setOnClickListener(this);
@@ -113,10 +125,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             if (userIsInTheMiddleOfTypingANumber) {
 
 
+
                 if (buttonPressed.equals(".") && mCalculatorDisplay.getText().toString().contains(".")) {
                     // ERROR PREVENTION
                     // Eliminate entering multiple decimals
+
  					Toast.makeText(getApplicationContext(), "No Multiple Decimal Points", Toast.LENGTH_SHORT).show();
+
                 } else {
                     mCalculatorDisplay.append(buttonPressed);
                 }
@@ -136,18 +151,24 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         } else {
             // operation was pressed
+
             if (userIsInTheMiddleOfTypingANumber) {
 
                 mCalculatorBrain.setOperand(Double.parseDouble(mCalculatorDisplay.getText().toString()));
+
                 userIsInTheMiddleOfTypingANumber = false;
             }
 
+
             mCalculatorBrain.performOperation(buttonPressed);
+
             mCalculatorDisplay.setText(df.format(mCalculatorBrain.getResult()));
 
         }
 
     }
+
+
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {

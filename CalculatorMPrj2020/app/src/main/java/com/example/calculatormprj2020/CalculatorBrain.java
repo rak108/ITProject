@@ -1,7 +1,28 @@
 package com.example.calculatormprj2020;
 
 
-public class CalculatorBrain {
+import android.app.Application;
+import android.view.View;
+import android.widget.TextView;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.Toast;
+import android.app.Application;
+import android.content.Context;
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class CalculatorBrain extends MainActivity {
+
+
+   public static String str;
+
+
     // 3 + 6 = 9
     // 3 & 6 are called the operand.
     // The + is called the operator.
@@ -30,6 +51,11 @@ public class CalculatorBrain {
     private static final String COSINE = "cos";
     private static final String TANGENT = "tan";
     // public static final String EQUALS = "=";
+
+
+
+
+
 
     // constructor
     protected CalculatorBrain() {
@@ -71,31 +97,35 @@ public class CalculatorBrain {
                 mWaitingOperand = 0;
                 break;
             case LOG:
-                mOperand=Math.log10(mOperand);
+                mOperand = Math.log10(mOperand);
                 break;
             case BACKSPACE:
-                mOperand-=(mOperand%10);
-                mOperand/=10;
-                mCalculatorMemory-=(mCalculatorMemory);
-                mCalculatorMemory/=10;
+                mOperand -= (mOperand % 10);
+                mOperand /= 10;
+                mCalculatorMemory -= (mCalculatorMemory);
+                mCalculatorMemory /= 10;
                 break;
             case PI:
-                if (mOperand != 0){
-                    mWaitingOperand=Math.PI;
-                }
-                else
-                    mOperand+=Math.PI;
+                if (mOperand != 0) {
+                    mWaitingOperand = Math.PI;
+                } else
+                    mOperand += Math.PI;
                 break;
             case PERCENT:
-                mOperand/=100;
+                mOperand /= 100;
                 break;
             case FACTORIAL:
-                int i;
-                double number=mOperand;//It is the number to calculate factorial
-                mOperand=1;
-                for(i=1;i<=number;i++) {
-                    mOperand = mOperand * i;
-                }
+
+                    int i;
+                    double number = mOperand;//It is the number to calculate factorial
+                    mOperand = 1;
+                    for (i = 1; i <= number; i++) {
+                        mOperand = mOperand * i;
+
+                    }
+
+
+
 
                 break;
             case SQUAREROOT:
@@ -145,12 +175,25 @@ public class CalculatorBrain {
                 if (mOperand != 0) {
                     mOperand = mWaitingOperand / mOperand;
                 }
+                else
+                {
+
+                    mOperand=0;
+                    mWaitingOperand=0;
+                    mWaitingOperator="";
+
+
+                }
+
+
                 break;
             case POWER:
-                mOperand=Math.pow(mWaitingOperand,mOperand);
+                mOperand = Math.pow(mWaitingOperand, mOperand);
                 break;
         }
 
     }
 
+
 }
+

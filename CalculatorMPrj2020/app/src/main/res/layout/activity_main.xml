@@ -9,8 +9,9 @@
     <TextView
         android:id="@+id/textViewDisplay"
         style="@style/DisplayStyle"
-        android:layout_width="410dp"
-        android:layout_height="150dp"
+        android:layout_width="412dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="28dp"
         android:layout_weight="1"
         android:text="0"
         app:layout_constraintBottom_toTopOf="@+id/buttonClear"
@@ -270,6 +271,18 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toEndOf="@+id/buttonDecimalPoint" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="Calculator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
