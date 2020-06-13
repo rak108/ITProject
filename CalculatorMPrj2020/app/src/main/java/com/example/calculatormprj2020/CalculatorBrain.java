@@ -116,6 +116,7 @@ public class CalculatorBrain extends MainActivity {
                 break;
             case FACTORIAL:
 
+                if (mOperand>=0) {
                     int i;
                     double number = mOperand;//It is the number to calculate factorial
                     mOperand = 1;
@@ -123,10 +124,11 @@ public class CalculatorBrain extends MainActivity {
                         mOperand = mOperand * i;
 
                     }
-
-
-
-
+                }
+                else{
+                    mOperand=0;
+                }
+                
                 break;
             case SQUAREROOT:
                 mOperand = Math.sqrt(mOperand);
